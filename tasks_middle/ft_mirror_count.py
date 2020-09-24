@@ -26,7 +26,7 @@ def ft_mirror_num(number):
 
 def ft_mirror_count(number):
     count = 0
-    for i in range(number):
+    for i in range(1, number + 1):
         if ft_mirror_num(i) is True:
             count += 1
     return count
