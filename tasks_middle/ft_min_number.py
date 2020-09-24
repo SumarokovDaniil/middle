@@ -1,4 +1,4 @@
-def ft_min_number(number):
+def ft_min_num(number):
     min_digit = number % 10
     while number > 0:
         digit = number % 10
