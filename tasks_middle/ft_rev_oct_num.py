@@ -22,6 +22,3 @@ def ft_rev_oct_num(number):
         bin_number += number % 10 * ft_pow(8, digit)
         number //= 10
     return bin_number
-
-
-print(ft_rev_oct_num(123))
