@@ -1,25 +1,24 @@
-def ft_rev_num(number):
-    rev = 0
-    if number < 0:
-        number = -number
-        while number > 0:
-            digit = number % 10
-            rev = rev * 10 + digit
-            number //= 10
-        return -rev
-
-    while number > 0:
-        digit = number % 10
-        rev = rev * 10 + digit
-        number //= 10
-    return rev
+def ft_pow(number, s):
+    previous = number
+    if s > 0:
+        for i in range(s - 1):
+            number *= previous
+        return number
+    elif s == 0:
+        return 1
+    for i in range(number):
+        number /= previous
+    return number
 
 
 def ft_rev_covert_num(number, s):
-    p = 1
-    d = 0
-    while number > 0:
-        d += number % s * p
-        p *= 10
-        number //= s
-    return ft_rev_num(d)
+    temp = number
+    bin_number = 0
+    count_digits = 0
+    while temp > 0:
+        temp //= 10
+        count_digits += 1
+    for digit in range(count_digits):
+        bin_number += number % 10 * ft_pow(s, digit)
+        number //= 10
+    return bin_number
