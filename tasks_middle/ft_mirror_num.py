@@ -22,6 +22,3 @@ def ft_mirror_num(number):
     if rev == temp:
         return True
     return False
-
-
-print(ft_mirror_num(-111))
