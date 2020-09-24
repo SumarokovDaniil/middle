@@ -30,6 +30,3 @@ def ft_mirror_count(number):
         if ft_mirror_num(i) is True:
             count += 1
     return count
-
-
-print(ft_mirror_count())
